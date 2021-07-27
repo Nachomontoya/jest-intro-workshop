@@ -3,7 +3,7 @@ test("1 is 1", () => {
 });
 
 // Execute only this test by adding the .skip command
-test("2 is not 1", () => {
+test.only("2 is not 1", () => {
   expect(2).not.toBe(1);
 });
 
