@@ -32,6 +32,10 @@ describe("04-exercises", () => {
      */
 
     // Write the assertions
+    let result = createUserObject("Alex", "Spence", "alex@mail.com");
+    expect(result.firstName).toBeTruthy();
+    expect(result.lastName).toBeTruthy();
+    expect(result.email).toBeTruthy();
   });
 
   test("createCorporateEmailAddress appends the corporate email domain", () => {
@@ -45,6 +49,8 @@ describe("04-exercises", () => {
      */
 
     // Write the assertion
+    let email = createCorporateEmailAddress("dani");
+    expect(email).toMatch(/@company.com/);
   });
 
   test("generateRandomNumberFrom1to10 returns a number between 1 and 10", () => {
@@ -56,5 +62,8 @@ describe("04-exercises", () => {
      */
 
     // Write the assertions
+    let number = generateRandomNumberFrom1to10();
+    expect(number).toBeGreaterThan(0);
+    expect(number).toBeLessThan(11);
   });
 });
